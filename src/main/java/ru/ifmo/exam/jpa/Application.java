@@ -59,16 +59,6 @@ public class Application {
         manager.close();
         factory.close();
 
-        /*EntityManagerFactory factory1 = Persistence.createEntityManagerFactory("ormExam4");
-        EntityManager manager1 = factory1.createEntityManager();
-        Team t = manager1.find(Team.class, 1);
-        manager1.getTransaction().begin();
-        manager1.remove(t);
-        manager1.getTransaction().commit();
-        System.out.println(t);
-        manager1.close();
-        factory1.close();*/
-
 
         teams.forEach(System.out::println);
 
