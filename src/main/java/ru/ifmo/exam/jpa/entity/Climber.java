@@ -20,6 +20,7 @@ public class Climber extends BaseId {
     private String addr;
 
     @ManyToMany(mappedBy = "climbers")
+
     private HashSet<Team> teams;
 
     public Climber(){

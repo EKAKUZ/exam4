@@ -19,7 +19,7 @@ public class Mountain{
     @Column(nullable = false)
     private double height;
 
-    @OneToMany(mappedBy = "mountain")
+    @OneToMany(mappedBy = "mountain", orphanRemoval = true)
     private HashSet<Team> teams;
 
     public Mountain() {teams = new HashSet<>();}

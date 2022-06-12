@@ -16,10 +16,13 @@ public class Team extends BaseId{
     // при добавлении группы в таблицу, если в группе есть гора и альпинисты,
     // они должны быть сразу добавлены в свои таблицы, горы с одинаковым названием добавляться не должны
     @ManyToMany(cascade = CascadeType.PERSIST)
+    @JoinTable(name ="climbers_teams", joinColumns = @JoinColumn(name ="id_team"),
+            inverseJoinColumns = @JoinColumn(name = "id_climber"))
     private HashSet<Climber> climbers; //заменила массив на лист
 
     @Setter
     @NonNull
+    @Column(name = "max_climbers")
     private int maxClimbers = 3; // ограничила колличество участников
 
     @Setter

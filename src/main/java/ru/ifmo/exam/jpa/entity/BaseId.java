@@ -8,7 +8,7 @@ import lombok.ToString;
 
 @ToString
 @MappedSuperclass
-public class BaseId {
+public abstract class BaseId {
     @Id
     @GeneratedValue(strategy =  GenerationType.IDENTITY) //SERIAL
     private int id;
